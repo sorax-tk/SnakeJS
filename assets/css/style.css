@@ -1,0 +1,33 @@
+ @import url("https://fonts.googleapis.com/css?family=VT323");
+ :selection {color:#FFFFFF; background:transparent;}
+ :-moz-selection {color:#FFFFFF; background:transparent;}
+ body {
+  background-color: #375;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "VT323";
+  color: #FFFFFF;
+}
+
+.text{
+  text-align: center;
+}
+.h1
+{
+  display: inline-block;
+  height: 100px;
+  width: 500px;
+  font-size: 32px;
+  margin-left: 670px;
+  }
+
+#canvas {
+  display: block;
+  margin: 110px auto;
+  margin-top: 10px;
+  border: 10px solid #657;
+}
+
