@@ -11,7 +11,7 @@ $(document).ready(function(){
   var food;
   var score;
   var level;
-  var speed=100;
+  var Speed;
   //Создание змейки
   var snake_array; // Масив ячеек
 
@@ -23,12 +23,15 @@ $(document).ready(function(){
                     //Отображение Score и Level
     score = 0;
     level =1;
+    speed =100;
     //Скорость змею указана через setInverval
     //через значение указаное в переменной Speed
     if(typeof game_loop != "undefined") clearInterval(game_loop);
-    game_loop = setInterval(paint, speed);
+    game_loop = setInterval(paint,speed);
   }
  init();
+
+
 
   function create_snake()
   {
@@ -73,6 +76,7 @@ $(document).ready(function(){
     {
       //рестарт
     init();
+    alert('Game Over');
       return;
     }
     // Функция,седания змеи
@@ -86,6 +90,13 @@ $(document).ready(function(){
 
       //Создание еды
       create_food();
+      if (score%5===0) 
+      {
+      level++;
+    clearInterval(game_loop);
+    speed =speed-10;
+    game_loop = setInterval(paint,speed);
+     }
     }
     else
     {
@@ -93,11 +104,7 @@ $(document).ready(function(){
       tail.x = nx;
       tail.y = ny;
     }
-    // Самое тупое в мире условие для очков :)Ты говорил сделать как по проще
 
-      if (i%10===0) {
-        level++;
-      }
 
     //
     snake_array.unshift(tail); // Ложим обратно в хвост,вместо первой ячейки
