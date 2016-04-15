@@ -76,7 +76,7 @@ $(document).ready(function(){
     {
       //рестарт
     init();
-    alert('Game Over');
+    alert('Game Over.You scrore:  ' + score);
       return;
     }
     // Функция,седания змеи
@@ -120,8 +120,10 @@ $(document).ready(function(){
     // Рисование счётаи и левела
     var score_text = "Score: " + score;
     var level_text = "Level: " + level;
+    var speed_text = "Speed: " + speed;
     ctx.fillText(score_text, 5, h-5);
     ctx.fillText(level_text, 350, h-5);
+    ctx.fillText(speed_text, 150, h-5);
     ctx.font = "20pt VT323";
     }
 // Функиция окрашивание клеток в белый цвет
