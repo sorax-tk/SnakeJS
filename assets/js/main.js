@@ -76,7 +76,7 @@ $(document).ready(function(){
     {
       //рестарт
     init();
-    alert('Game Over.You scrore:  ' + score);
+    alert('Game Over');
       return;
     }
     // Функция,седания змеи
